@@ -86,7 +86,7 @@ This is implemented first as a simple jackpot contract. The fallback function co
 ***
 
 
-```javascript=
+```js
 // Jackpot.sol
 pragma solidity ^0.4.17;
 
