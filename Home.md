@@ -141,7 +141,7 @@ The Task Market contract can then inherit from this and define its usage.
 
 ***
 
-```javascript=
+```js
 pragma solidity ^0.4.17;
 
 import "./Jackpot.sol";
@@ -181,7 +181,7 @@ contract TaskMarket is Jackpot {
 
 To post a task, the giver supplies, along with the `init` hash and a `min_deposit`, a quantity of Wei, from which a fraction is used as 'verification tax', with the remainder offered to the solver as reward.
 
-```javascript=
+```js
 function post (
     bytes32 init,
     uint min_deposit
@@ -207,7 +207,7 @@ event Post (address indexed giver, bytes32 id, uint reward);
 
 To place a bid on a task, a solver supplies a suitable deposit, together with the hash of their private random bits $r$. 
 
-```javascript=
+```js
 function bid (
     bytes32 id,
     bytes rand_hash
@@ -236,7 +236,7 @@ event Bid (address indexed bidder, uint amount);
 Before reaching a timeout, the solver must submit a pair of solutions.
 
 
-```javascript=
+```js
 function commit(bytes32 id, bytes32[2] soln_hashes) public returns (bool) {
     Task T = tasks[id];
     require (T.solver == msg.sender);
@@ -257,7 +257,7 @@ event Commit (address indexed solver, bytes32 id, bytes32[2] soln_hashes);
 ```
 When this transaction is mined, including `T.soln_hashes` in a block, the solver compares his private random bits `r` with the hash of the block at height `T.committed`. The resulting decision comes in the form of a call to `designate` one of the solutions as the submission.
 
-```javascript=
+```js
 function designate (
     bytes32 id, 
      bool choice
