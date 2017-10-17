@@ -1,5 +1,3 @@
-# The Incentive Layer
-
 This is the economic layer of the protocol. It incentivizes Task Givers, Solvers, Verifiers, Challengers, Referees, and Judges to work together in enabling trustless computation. A step-by-step breakdown of this protocol is presented below.
 
 
