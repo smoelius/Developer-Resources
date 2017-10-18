@@ -31,7 +31,7 @@ This is the economic layer of the protocol. It incentivizes Task Givers, Solvers
 
 7. After `timeOut` elapses, interested Verifiers broadcasts to the blockchain this hashed number in the clear to reveal their action.
   * 7a. IF no Verifier challenges solution, THEN:
-    * 7aa. Solver reveals `r`. IF there was no forced error, THEN Solver reveals solution and received the task reward ($). (This is the most common play-out of the game).
+    * 7aa. Solver reveals `r`. IF there was no forced error, THEN Solver reveals solution and receives the task reward ($). (This is the most common play-out of the game).
     * 7ab. Solver reveals `r`. IF there was a forced error, THEN protocol has failed since no one challenged. (This is the most uncommon play-out of the game)
   * 7b. ELSE a Verifier challenges solution, THEN: the Solver reveals their `random string r` to the Truebit contract. Referees check it against their commitment from the preprocessing step.
     * 7ba. IF hash of concat of r and block hash is small (as determined by the forced error rate), THEN a forced error is in effect.
