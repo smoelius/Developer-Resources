@@ -15,7 +15,9 @@ _Potential Solutions_:
 
 _Other notes_:
 * Problem, although minor and won’t effect protocol: there is information leaking, as such: The solver posts both correct (SolutionA) and incorrect (SolutionB) solution hashes to the blockchain. They find there is a forced error in effect and select SolutionB as their submission. Verifiers compute and find that they disagree with the hash of SolutionB (i.e. they will challenge), but they also see that their solution agrees with the hash of SolutionA, the Solver’s alternate solution. As such, they also know that there is a forced error in effect, before the protocol has played out. This seems like it won’t actually effect how the protocol plays out.
--> This can solved by adding some noise the the hashes.  Instead of just hashing the solutions, the Solver can hash a pair (solution, bunch of random bits).  I would suggest using the Solver's private random bits here since he actually has an incentive to make those random.
+
+  * This can be solved by adding some noise the the hashes.  Instead of just hashing the solutions, the Solver can hash a pair (solution, bunch of random bits).  I would suggest using the Solver's private random bits here since he actually has an incentive to make those random.
+
 
 ---
 
