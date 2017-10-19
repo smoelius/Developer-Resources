@@ -1,6 +1,4 @@
 
-# Open Problems
-
 **In the case of a forced-error, how does the protocol incentivize verifiers to check the Solver's secondary (i.e. "correct") solution?**
 
 _The scenario_:
